@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: #191825;
+        }
+        h1{
+            font-size: 96px;
+            color: white;
+            font-family: verdana;
+            position: relative;
+        }
+        h1::before{
+            content: "OMGCREATION";
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #e9b824;
+            border-right: 3px solid #e9b824;
+            overflow: hidden;
+            animation: slid 2s linear infinite alternate;
+        }
+        @keyframes slid {
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>OMGCREATION</h1>
+</body>
+</html>

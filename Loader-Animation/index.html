@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #191825;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .loader{
+            width: 20rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: #625dff;
+            position: relative;
+            animation: lodder 1s linear infinite;
+        }
+        @keyframes lodder{
+            100%{
+                rotate: 360deg;
+            }
+        }
+        .loader::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 18rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: #191825;
+    
+        }
+        .loader::after{
+            content: "";
+            position: absolute;
+            width: 5rem;
+            top: 8.5rem;
+            left: -2.5rem;
+            width: 5rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: #625dff;
+            box-shadow: 0px 0px 24px 17px #625dff,0px 10px 15px -3px #625dff;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+</html>

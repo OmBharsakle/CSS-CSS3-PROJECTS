@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: #181925;
+        }
+        .credle{
+            width: 50rem;
+            height: 50rem;
+            border-top: 2rem solid #865dff;
+            border-radius: 0.5rem;
+            margin-top: 10rem;
+            display: flex;
+            justify-content: center;
+            gap: 4.5rem;
+        }
+        .credle div {
+            width: 0.5rem;
+            height: 20rem;
+            background-color: #865dff;
+            position: relative;
+            
+        }
+        .credle div::before{
+            position: absolute;
+            top: 90%;
+            left: -2.2rem;
+            content: "";
+            background: #865dff;
+            width: 5rem;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            
+        }
+        .credle div:first-child{
+            animation: left-swing 2s linear infinite;
+            transform-origin: top left;
+
+        }
+        .credle div:last-child{
+            animation: last-swing 2s linear 1s infinite;
+            transform-origin: top left;
+
+        }
+        @keyframes left-swing {
+            0%{
+                rotate: 0deg;
+            }
+            25%{
+                rotate: 30deg;
+            }
+            50%{
+                rotate: 0deg;
+            }
+            100%{
+                rotate: 0deg;
+            }
+
+        }
+        @keyframes last-swing {
+            0%{
+                rotate: 0deg;
+            }
+            25%{
+                rotate: -30deg;
+            }
+            50%{
+                rotate: 0deg;
+            }
+            100%{
+                rotate: 0deg;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+
+        <div class="credle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+    
+
+
+
+</body>
+</html>
